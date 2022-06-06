@@ -2,7 +2,7 @@
 $server   ="localhost" ; //server localhost
 $username ="root"; //username default 
 $password =""; //password root. Default kosongkan aja
-$database   ="doktergigi_php"; //ini adalah nama database
+$database   ="php_database"; //ini adalah nama database
 $conn = mysqli_connect($server, $username, $password, $database) or die("Connection failed: " . mysqli_connect_error());
 switch($_GET['aksi']){
 case "tampil": //untuk mengakses aksi=tampil
@@ -33,7 +33,7 @@ echo "<td>$tampil[tinggi]</td>";
 echo "<td>$tampil[alamat]</td>";
 echo "<td>$tampil[keterangan]</td>";
 echo "<td><a href='?modul=pasien&aksi=aksihapus&kode_pasien=$tampil[kode_pasien]' onclick='return confirm(\"Anda Yakin Menghapus Data Ini?\")'>Hapus</a></td>";
-echo "<td><a href='http://localhost/sisteminformasi/modul/printing.php?kode_pasien=$tampil[kode_pasien]&nama_pasien=$tampil[nama_pasien]&jenis_kelamin=$tampil[jenis_kelamin]&golongan_pasien=$tampil[golongan_pasien]&alamat=$tampil[alamat]'> Print Kartu Pasien</a></td>";
+echo "<td><a href='http://localhost/php-sistem-informasi/modul/printing.php?kode_pasien=$tampil[kode_pasien]&nama_pasien=$tampil[nama_pasien]&jenis_kelamin=$tampil[jenis_kelamin]&golongan_pasien=$tampil[golongan_pasien]&alamat=$tampil[alamat]'> Print Kartu Pasien</a></td>";
 echo "</tr>";
 $nomor++; 
 }
@@ -59,5 +59,5 @@ break;
 
 <body>
     <br></br>
-    <button onclick="window.open('http://localhost/sisteminformasi/modul/pdfoutput.php')"> Print Seluruh Data </button>
+    <button onclick="window.open('http://localhost/php-sistem-informasi/modul/pdfoutput.php')"> Print Seluruh Data </button>
 </body>

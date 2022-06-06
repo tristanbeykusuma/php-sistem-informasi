@@ -34,7 +34,7 @@ session_start();
     $server   ="localhost" ; //server localhost
     $username ="root"; //username default 
     $password =""; //password root. Default kosongkan aja
-    $database   ="doktergigi_php"; //ini adalah nama database
+    $database   ="php_database"; //ini adalah nama database
     $conn = mysqli_connect($server, $username, $password, $database) or die("Connection failed: " . mysqli_connect_error());
 
     //jika kita klik cari, maka yang tampil query cari ini
@@ -75,7 +75,7 @@ session_start();
 </body>
 <body>
 
-<button onclick="location.href = 'http://localhost/sisteminformasi/latihan.php';" id="myButton" class="float-left submit-button" >Home</button>
+<button onclick="location.href = 'http://localhost/php-sistem-informasi/latihan.php';" id="myButton" class="float-left submit-button" >Home</button>
 
 </body>
 </html>
