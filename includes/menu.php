@@ -1,3 +1,4 @@
+
 <div class="menu">
 <ul>
 <a style='color:black' href='http://localhost/php-sistem-informasi/latihan.php'>Home</a></li>

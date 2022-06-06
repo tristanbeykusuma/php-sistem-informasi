@@ -1,5 +1,4 @@
 <?php 
-
 session_start();
 
 if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
@@ -14,22 +13,23 @@ error_reporting(0);
 ?>
 
 <head>
-<title>Sistem Informasi Dental Record</title>
+<title>Sistem Inventory</title>
 <!--Memanggil File CSS-->
 <link rel="stylesheet" type="text/css" href="style\style.css"> 
 </head>
-
-<body>
-<link rel="stylesheet" type="text/css" href="style\style.css"> 
-<div class="header">
-<h1><center>Sistem Informasi Dental Record</center></h1>
-</div>
 
 <div class="navbar">
 <?php
 include "includes/menu.php"; //ini untuk memanggil file menu
 ?>
 </div>
+
+<body>
+<link rel="stylesheet" type="text/css" href="style\style.css"> 
+<div class="header">
+<h1><center>Sistem Inventory Handphone</center></h1>
+</div>
+
 
 <div class="konten">
 <?php

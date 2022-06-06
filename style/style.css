@@ -19,7 +19,7 @@ float: right;
 padding: 15px;
 }
 
-header {
+.header {
     background-color: #42c7f3;
     color: #080606;
     padding: 15px;
@@ -64,7 +64,7 @@ border:1px solid grey;
 {
 padding:5px;
 color:white;
-background-color:#859094;
+background-color: #42c7f3;
 text-align:center;
 border:1px solid grey;
 }
@@ -125,7 +125,7 @@ background-color: #cbc7da;
   
   /* Facebook */
   .fa-facebook {
-    background: #2dca1f;
+    background: #1f39ca;
     color: white;
   }
   
@@ -142,7 +142,7 @@ background-color: #cbc7da;
 
 
 body {
-    background-color: #FFFFFF;
+    background-color: #acf3ed;
     margin: 0;
 }
 .navtop {
