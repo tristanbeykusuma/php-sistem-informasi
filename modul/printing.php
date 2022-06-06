@@ -32,7 +32,7 @@ $pdf = new FPDF('l','mm','A5');
  $pdf->Cell(5);
  $pdf->Cell(50,6,"Nama Pasien : $data2",0,1);
  $pdf->Cell(5);
- $pdf->Cell(50,6,"Tinggi : $data3",0,1);
+ $pdf->Cell(50,6,"Golongan : $data3",0,1);
  $pdf->Cell(5);
  $pdf->Cell(50,6,"Jenis Kelamin : $data4",0,1);
  $pdf->Cell(5);
