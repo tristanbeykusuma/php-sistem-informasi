@@ -17,7 +17,7 @@ float: right;
 padding: 15px;
 }
 .header {
-    background-color: #9da9ad;
+    background-color: #42c7f3;
     color: #080606;
     padding: 15px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,20);
@@ -30,7 +30,7 @@ padding: 15px;
 .menu li {
     padding: 8px;
     margin-bottom: 7px;
-    background-color :#abb7bb;
+    background-color: #42c7f3;
     color: #050404;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,20);
 }
@@ -74,7 +74,7 @@ background-color: #cbc7da;
 
 .navbar {
     overflow: hidden;
-    background-color: #9da9ad;
+    background-color: #42c7f3;
     position: fixed;
     bottom: 0;
     width: 100%;
