@@ -20,6 +20,7 @@ error_reporting(0);
 </head>
 
 <body>
+<link rel="stylesheet" type="text/css" href="style/style.css"> 
 <div class="header">
 <h1><center>Sistem Informasi Dental Record</center></h1>
 </div>
