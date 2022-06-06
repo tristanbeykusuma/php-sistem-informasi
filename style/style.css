@@ -4,6 +4,7 @@ html {
 * {
     box-sizing: border-box; 
 }
+
 .leftbar {
 width: 20%;
 float: left;
@@ -11,12 +12,14 @@ padding-right: 15px;
 padding-top: 15px;
 padding-bottom: 15px;
 }
+
 .konten {
 width: 80%;
 float: right;
 padding: 15px;
 }
-.header {
+
+header {
     background-color: #42c7f3;
     color: #080606;
     padding: 15px;
