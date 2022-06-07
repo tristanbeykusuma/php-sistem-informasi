@@ -18,20 +18,25 @@ error_reporting(0);
 <link rel="stylesheet" type="text/css" href="style\style.css"> 
 </head>
 
-<div class="navbar">
-<?php
-include "includes/menu.php"; //ini untuk memanggil file menu
-?>
-</div>
-
 <body>
 <link rel="stylesheet" type="text/css" href="style\style.css"> 
 <div class="header">
 <h1><center>Sistem Inventory Handphone</center></h1>
 </div>
 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%;right:0">
+<a href='http://localhost/php-sistem-informasi/latihan.php' class="w3-bar-item w3-button">Home</a>
+<a href='http://localhost/php-sistem-informasi/latihan.php?modul=handphone&aksi=tampil' class="w3-bar-item w3-button">Data Handphone</a>
+<a href='http://localhost/php-sistem-informasi/modul/cari.php' class="w3-bar-item w3-button">Cari Data</a>
+<a href='http://localhost/php-sistem-informasi/latihan.php?modul=tambah&aksi=tampil' class="w3-bar-item w3-button">Data Baru</a>
+<a href='http://localhost/php-sistem-informasi/latihan.php?modul=costumer&aksi=tampil' class="w3-bar-item w3-button">Hubungi Kami</a>
+<a class="w3-bar-item w3-button">Menu Lainnya</a>
+<a href="logout.php" class="w3-bar-item w3-button">Logout</a>
+</div>
 
-<div class="konten">
+<div style="margin-left:25%">
+<div class="w3-container">
 <?php
 include "koneksi/koneksi.php"; //untuk koneksi mysql
 switch($_GET['modul']){
@@ -39,17 +44,11 @@ switch($_GET['modul']){
     echo '<h1>Menu Utama</h1>
     <p>Selamat datang! Silahkan mengklik menu yang ingin dibuka</p>';
     break;
-    case "pasien": //barang adalah nama modul nya
-    include "modul/pasien.php";
+    case "handphone": //barang adalah nama modul nya
+    include "modul/handphone.php";
     break;
     case "tambah":
     include "modul/tambah.php";
-    break;
-    case "list":
-    include "modul/list.php";
-    break;
-    case "db" :
-    include "modul/db.php";
     break;
     case "costumer" :
     include "modul/costumer.php";
@@ -63,13 +62,10 @@ switch($_GET['modul']){
 }
 ?>
 </div>
-
+</div>
 </body>
-<body>
 
-     <a href="logout.php">Logout</a>
 
-</body>
 </html>
 
 <?php 

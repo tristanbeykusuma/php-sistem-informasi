@@ -7,7 +7,7 @@ session_start();
  ?>
 <html>
 <head>
-<title>Belajar PHP</title>
+<title>Cari Data</title>
 </head>
 <body>
  <h1>Pencarian Data</h1>
@@ -21,11 +21,11 @@ session_start();
  <table border="1">
   <thead>
    <tr>
-    <th>Kode Pasien</th>
-    <th>Nama </th>
-    <th>Tinggi</th>
-    <th>Alamat</th>
-    <th>Keterangan</th>
+    <th>Kode Handphone</th>
+    <th>Nama Handphone </th>
+    <th>Brand</th>
+    <th>Stok Awal</th>
+    <th>Stok Akhir</th>
    </tr>
   </thead>
   <tbody>
@@ -43,12 +43,12 @@ session_start();
      $kata_cari = $_GET['kata_cari'];
 
      //mencari data dengan menggunakan query
-     $query = "SELECT * FROM tabel_pasien WHERE nama_pasien like '%".$kata_cari."%' ORDER BY kode_pasien ASC";
+     $query = "SELECT * FROM tabel_stok WHERE nama_handphone like '%".$kata_cari."%' ORDER BY kode_handphone ASC";
     
     }
     else {
         //jika tidak ada pencarian, default yang dijalankan query ini
-        $query = "SELECT * FROM tabel_pasien ORDER BY kode_pasien ASC";
+        $query = "SELECT * FROM tabel_stok ORDER BY kode_handphone ASC";
     }
     
     $result = mysqli_query($conn, $query);
@@ -60,11 +60,11 @@ session_start();
     while ($row = mysqli_fetch_assoc($result)) {
    ?>
    <tr>
-    <td><?php echo $row['kode_pasien']; ?></td>
-    <td><?php echo $row['nama_pasien']; ?></td>
-    <td><?php echo $row['tinggi']; ?></td>
-    <td><?php echo $row['alamat']; ?></td>
-    <td><?php echo $row['keterangan']; ?></td>
+    <td><?php echo $row['kode_handphone']; ?></td>
+    <td><?php echo $row['nama_handphone']; ?></td>
+    <td><?php echo $row['brand_name']; ?></td>
+    <td><?php echo $row['stok_awal']; ?></td>
+    <td><?php echo $row['stok_akhir']; ?></td>
    </tr>
    <?php
    }

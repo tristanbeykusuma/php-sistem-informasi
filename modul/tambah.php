@@ -1,31 +1,31 @@
 <?php
 switch($_GET['aksi']){
     case "tampil": //untuk interface tambah barang
-    $query2=mysqli_query($conn,"SELECT COUNT(kode_pasien) AS total FROM tabel_pasien"); 
+    $query2=mysqli_query($conn,"SELECT COUNT(kode_handphone) AS total FROM tabel_stok"); 
     $tampil2=mysqli_fetch_array($query2);
-    echo "<span style='font-size:18pt; font-weight:bold;'>Tambah Data Pasien</span></br></br>
+    echo "<span style='font-size:18pt; font-weight:bold;'>Tambah Data HP</span></br></br>
         <form method='POST' action='?modul=tambah&aksi=aksitambah'>
         <table class='forminput'>
         <tr>
-        <td>Kode Pasien</td><td>: <input type='varchar' name='kode_pasien' maxlength='12' required='required' oninput='setCustomValidity(\"\")' oninvalid='this.setCustomValidity(\"Isi Kode ..!\")'/></td>
+        <td>Kode Handphone</td><td>: <input type='varchar' name='kode_handphone' maxlength='12' required='required' oninput='setCustomValidity(\"\")' oninvalid='this.setCustomValidity(\"Isi Kode ..!\")'/></td>
         </tr>
         <tr>
-        <td>Nama Pasien</td><td>: <input type='varchar' name='nama_pasien' maxlength='30' required='required' oninput='setCustomValidity(\"\")' oninvalid='this.setCustomValidity(\"Isi Nama ..!\")'/></td>
+        <td>Nama Handphone</td><td>: <input type='varchar' name='nama_handphone' maxlength='30' required='required' oninput='setCustomValidity(\"\")' oninvalid='this.setCustomValidity(\"Isi Nama ..!\")'/></td>
         </tr>
         <tr>
-        <td>Golongan Pasien</td><td>: <input type='char' name='golongan_pasien' maxlength='4' required='required' oninput='setCustomValidity(\"\")' oninvalid='this.setCustomValidity(\"Isi Golongan..!\")'/></td>
+        <td>Brand Name</td><td>: <input type='varchar' name='brand_name' maxlength='30' required='required' oninput='setCustomValidity(\"\")' oninvalid='this.setCustomValidity(\"Isi Brand..!\")'/></td>
         </tr>
         <tr>
-        <td>Jenis Kelamin</td><td>: <input type='varchar' name='jenis_kelamin' maxlength='4' required='required' oninput='setCustomValidity(\"\")' oninvalid='this.setCustomValidity(\"Isi jenis kelamin..!\")'/></td>
+        <td>Stok Awal</td><td>: <input type='int' name='stok_awal' maxlength='20' required='required' oninput='setCustomValidity(\"\")' oninvalid='this.setCustomValidity(\"Isi stok awal..!\")'/></td>
         </tr>
         <tr>
-        <td>Tinggi</td><td>: <input type='int' name='tinggi' maxlength='10' required='required' oninput='setCustomValidity(\"\")' oninvalid='this.setCustomValidity(\"Isi Tinggi..!\")'/></td>
+        <td>Barang Masuk</td><td>: <input type='int' name='barang_masuk' maxlength='20' required='required' oninput='setCustomValidity(\"\")' oninvalid='this.setCustomValidity(\"Isi barang masuk..!\")'/></td>
         </tr>
         <tr>
-        <td>Alamat</td><td>: <input type='varchar' name='alamat' maxlength='255' required='required' oninput='setCustomValidity(\"\")' oninvalid='this.setCustomValidity(\"Isi Alamat..!\")'/></td>
+        <td>Barang Keluar</td><td>: <input type='int' name='barang_keluar' maxlength='20' required='required' oninput='setCustomValidity(\"\")' oninvalid='this.setCustomValidity(\"Isi barang keluar..!\")'/></td>
         </tr>
         <tr>
-        <td>Keterangan</td><td>: <input type='varchar' name='keterangan' maxlength='255' required='required' oninput='setCustomValidity(\"\")' oninvalid='this.setCustomValidity(\"Isi Keterangan..!\")'/></td>
+        <td>Stok Akhir</td><td>: <input type='int' name='stok_akhir' maxlength='20' required='required' oninput='setCustomValidity(\"\")' oninvalid='this.setCustomValidity(\"Isi stok akhir..!\")'/></td>
         </tr>
         <tr><td colspan='2'><input type='submit' value='Simpan'/><input type='submit' value='Batal' onclick='self.history.back()'/></tr>
         <tr></tr>
@@ -35,25 +35,25 @@ switch($_GET['aksi']){
     break;
     
     case "aksitambah": //untuk aksi tambah barang
-    $sql = mysqli_query($conn,"INSERT INTO tabel_pasien
-        (kode_pasien,nama_pasien,golongan_pasien,jenis_kelamin,tinggi,alamat,keterangan) 
+    $sql = mysqli_query($conn,"INSERT INTO tabel_stok
+        (kode_handphone,nama_handphone,brand_name,stok_awal,barang_masuk,barang_keluar,stok_akhir) 
         values (
-        '$_POST[kode_pasien]',
-        '$_POST[nama_pasien]',
-        '$_POST[golongan_pasien]',
-        '$_POST[jenis_kelamin]',
-        '$_POST[tinggi]',
-        '$_POST[alamat]',
-        '$_POST[keterangan]')
+        '$_POST[kode_handphone]',
+        '$_POST[nama_handphone]',
+        '$_POST[brand_name]',
+        '$_POST[stok_awal]',
+        '$_POST[barang_masuk]',
+        '$_POST[barang_keluar]',
+        '$_POST[stok_akhir]')
         ");  
         if (!$sql)
                 {
                 echo '<script>alert(\'Data Gagal Dimasukkan\')
-                    setTimeout(\'location.href="?modul=pasien&aksi=tampil"\' ,0);</script>';
+                    setTimeout(\'location.href="?modul=handphone&aksi=tampil"\' ,0);</script>';
                 }else
                 {
                 echo '<script>alert(\'Data Berhasil Dimasukkan\')
-                    setTimeout(\'location.href="?modul=pasien&aksi=tampil"\' ,0);</script>';
+                    setTimeout(\'location.href="?modul=handphone&aksi=tampil"\' ,0);</script>';
         }
     break;
 }

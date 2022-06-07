@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 06, 2022 at 02:51 PM
+-- Generation Time: Jun 07, 2022 at 05:19 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.23
 
@@ -18,6 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
+-- Database: `php_database`
 --
 
 -- --------------------------------------------------------
@@ -839,27 +840,27 @@ INSERT INTO `tabel_admin` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tabel_pasien`
+-- Table structure for table `tabel_stok`
 --
 
-CREATE TABLE `tabel_pasien` (
-  `kode_pasien` varchar(12) NOT NULL,
-  `nama_pasien` varchar(30) NOT NULL,
-  `golongan_pasien` char(4) NOT NULL,
-  `jenis_kelamin` varchar(10) NOT NULL,
-  `tinggi` int(10) NOT NULL,
-  `alamat` varchar(255) NOT NULL,
-  `keterangan` varchar(255) NOT NULL
+CREATE TABLE `tabel_stok` (
+  `kode_handphone` varchar(12) NOT NULL,
+  `nama_handphone` varchar(30) NOT NULL,
+  `brand_name` varchar(30) NOT NULL,
+  `stok_awal` int(20) NOT NULL,
+  `barang_masuk` int(20) NOT NULL,
+  `barang_keluar` int(20) NOT NULL,
+  `stok_akhir` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tabel_pasien`
+-- Dumping data for table `tabel_stok`
 --
 
-INSERT INTO `tabel_pasien` (`kode_pasien`, `nama_pasien`, `golongan_pasien`, `jenis_kelamin`, `tinggi`, `alamat`, `keterangan`) VALUES
-('PA B01/2022', 'Budi Hendrawan', 'PA', 'L', 170, 'Jl. Tukad Pakerisan No.88 Denpasar', 'Dx. Gingivitis Marginalis; Tx. Scalling'),
-('PA T01/2022', 'Teguh', 'PA', 'L', 180, 'JI. Soka Gg. Ili No. 1 Denpasar', 'Dx. Plak All Region, Stain/Food Debris; Tx. Polishing RA/RB'),
-('PA T02/2022', 'Tegar Kurniawan', 'PA', 'L', 171, 'Jl. Diponegoro, No. Ganjil 47 - 113, Denpasar Barat', 'Dx. Gingivitis Marginalis Chronic; Tx. Scalling, Ortho RB');
+INSERT INTO `tabel_stok` (`kode_handphone`, `nama_handphone`, `brand_name`, `stok_awal`, `barang_masuk`, `barang_keluar`, `stok_akhir`) VALUES
+('A001', 'Galaxy Zflip 3', 'Samsung', 50, 40, 0, 90),
+('A002', 'Redmi 10C', 'Xiaomi', 180, 10, 20, 170),
+('A003', 'Xperia Pro-I', 'Sony', 0, 77, 0, 77);
 
 -- --------------------------------------------------------
 
@@ -1150,10 +1151,10 @@ ALTER TABLE `tabel_admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tabel_pasien`
+-- Indexes for table `tabel_stok`
 --
-ALTER TABLE `tabel_pasien`
-  ADD PRIMARY KEY (`kode_pasien`);
+ALTER TABLE `tabel_stok`
+  ADD PRIMARY KEY (`kode_handphone`);
 
 --
 -- Indexes for table `todos`
