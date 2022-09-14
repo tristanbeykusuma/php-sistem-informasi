@@ -28,7 +28,7 @@
  $pdf->SetFont('Arial','',10);
   
  //koneksi ke database
- $mysqli = new mysqli("localhost","root","","php_database");
+ $mysqli = new mysqli("sql6.freesqldatabase.com","sql6519513","xcmvhVFGC7","sql6519513");
  $no = 1;
  $tampil = mysqli_query($mysqli, "select * from tabel_stok");
  while ($hasil = mysqli_fetch_array($tampil)){
