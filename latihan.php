@@ -26,11 +26,11 @@ error_reporting(0);
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%;right:0">
-<a href='http://digital-dental-record.herokuapp.com/latihan.php' class="w3-bar-item w3-button">Home</a>
-<a href='http://digital-dental-record.herokuapp.com/latihan.php?modul=handphone&aksi=tampil' class="w3-bar-item w3-button">Data Handphone</a>
-<a href='http://digital-dental-record.herokuapp.com/modul/cari.php' class="w3-bar-item w3-button">Cari Data</a>
-<a href='http://digital-dental-record.herokuapp.com/latihan.php?modul=tambah&aksi=tampil' class="w3-bar-item w3-button">Data Baru</a>
-<a href='http://digital-dental-record.herokuapp.com/latihan.php?modul=costumer&aksi=tampil' class="w3-bar-item w3-button">Hubungi Kami</a>
+<a href='latihan.php' class="w3-bar-item w3-button">Home</a>
+<a href='latihan.php?modul=handphone&aksi=tampil' class="w3-bar-item w3-button">Data Handphone</a>
+<a href='cari.php' class="w3-bar-item w3-button">Cari Data</a>
+<a href='latihan.php?modul=tambah&aksi=tampil' class="w3-bar-item w3-button">Data Baru</a>
+<a href='latihan.php?modul=costumer&aksi=tampil' class="w3-bar-item w3-button">Hubungi Kami</a>
 <a class="w3-bar-item w3-button">Menu Lainnya</a>
 <a href="logout.php" class="w3-bar-item w3-button">Logout</a>
 </div>
