@@ -18,7 +18,7 @@
         
         <section>
         <div>
-            <img src="img\connect.png" alt="myPic" width="125" height="125"/>
+            <img src="img/connect.png" alt="myPic" width="125" height="125"/>
         </div>
         </section>
 
