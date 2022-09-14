@@ -75,7 +75,7 @@ session_start();
 </body>
 <body>
 
-<button onclick="location.href = 'http://localhost/php-sistem-informasi/latihan.php';" id="myButton" class="float-left submit-button" >Home</button>
+<button onclick="location.href = 'http://digital-dental-record.herokuapp.com/php-sistem-informasi/latihan.php';" id="myButton" class="float-left submit-button" >Home</button>
 
 </body>
 </html>
