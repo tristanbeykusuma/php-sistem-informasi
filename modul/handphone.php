@@ -57,5 +57,5 @@ break;
 
 <body>
     <br></br>
-    <button onclick="window.open('http://digital-dental-record.herokuapp.com/php-sistem-informasi/modul/pdfoutput.php')"> Print Seluruh Data </button>
+    <button onclick="window.open('http://digital-dental-record.herokuapp.com/modul/pdfoutput.php')"> Print Seluruh Data </button>
 </body>
